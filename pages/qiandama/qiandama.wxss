@@ -1,0 +1,9 @@
+/* pages/qiandama.wxss */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.order-item {
+  margin: 10rpx;
+}

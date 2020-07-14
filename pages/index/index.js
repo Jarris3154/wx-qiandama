@@ -14,6 +14,12 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },  
+  //跳到qiandama
+  jumpToQiandama: function() {
+    wx.navigateTo({
+      url: '../qiandama/qiandama'
+    })
   },
   onLoad: function () {
     if (app.globalData.userInfo) {
