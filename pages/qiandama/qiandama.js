@@ -116,7 +116,7 @@ Page({
       })
   },
   getDiscount: function () {
-    let discount = 10;
+    let discount = 1;
 
     let now = new Date();
 
