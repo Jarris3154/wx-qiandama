@@ -116,7 +116,7 @@ Page({
       })
   },
   getDiscount: function () {
-    let discount = 10;
+    let discount = 1;
 
     let now = new Date();
 
@@ -133,14 +133,14 @@ Page({
 
     let diffMillis = now.getTime() - today19.getTime();
 
-    if (now >= today19) {
-      console.log(diffMillis/period30min)
+    if (now > today19) {
       //因为19点开始要减1，所以要多减掉1折。
       let step = parseInt(diffMillis / period30min) + 1;
       discount -= step;
+      discount = discount / 10;
     }
 
-    return discount/10;
+    return discount;
   },
   multiply: function (arg1, arg2) {
     var m = 0,
