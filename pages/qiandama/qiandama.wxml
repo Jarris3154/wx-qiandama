@@ -1,16 +1,26 @@
 <!--pages/qiandama.wxml-->
-<view class="container order-list">
-	<text>钱大妈折扣计算器</text>
-	当前折扣：{{discount }}
-	<input bindinput='inputChangeHandle' auto-focus value="{{input}}" type="text" placeholder='请输入价格' class="price-item" bindchange="addNewItem"></input>
-	<button type="primary" size="mini" bindtap="addNewItem">
-		增加
-	</button>
-	<button type="primary" size="mini" bindtap="clearStorage">
-		清空
-	</button>
-	<block wx:for="{{prices}}" wx:for-item="price">
-		<text class="price-item">{{index + 1}}. {{price}}</text>
-	</block>
-  <text>total: {{total}}</text>
+<view class="container">
+	<view class="header">
+		<text>钱大妈折扣计算器</text>
+	</view>
+	<view>
+		当前折扣：{{discount }}
+	</view>
+	<view>
+		<input bindinput='inputChangeHandle' auto-focus value="{{input}}" type="text" placeholder='请输入价格' class="price-item" bindchange="addNewItem"></input>
+		<button type="primary" size="mini" bindtap="addNewItem">
+			增加
+		</button>
+		<button type="primary" size="mini" bindtap="clearStorage">
+			清空
+		</button>
+	</view>
+
+	<view class="order-list">
+		<block wx:for="{{prices}}" wx:for-item="price">
+			<text class="price-item">菜品{{index + 1}}.   {{price}}元</text>
+		</block>
+	</view>
+
+	<text>总价格: {{total}} 元</text>
 </view>

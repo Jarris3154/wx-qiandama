@@ -1,4 +1,8 @@
 /* pages/qiandama.wxss */
+.header {
+  display: flex;
+  
+}
 .order-list {
   display: flex;
   flex-direction: column;
